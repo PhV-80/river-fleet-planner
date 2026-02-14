@@ -18,3 +18,5 @@ staticfiles/
 .vscode/
 *.swp
 *.swo
+
+settings.py
