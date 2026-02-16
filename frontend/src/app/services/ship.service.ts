@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { inject } from '@angular/core';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http'
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 export interface Ship {
@@ -18,15 +18,15 @@ export interface Ship {
 })
 
 export class ShipService {
-  private apiUrl = environment.apiUrl/ships;
-  private httpClient = inject(HttpClient);
+  private apiUrl = `${environment}.apiUrl/ships`;
+  private http = inject(HttpClient);
 
   getShips(): Observable<Ship[]> {
-    return this.http.get<Ship[]>(this.apiUrl)
+    return this.http.get<Ship[]>(this.apiUrl);
   }
 
   getShip(id: number): Observable<Ship> {
-    return this.http.get<Ship>(this.apiUrl}/id/);
+    return this.http.get<Ship>(`${this.apiUrl}/${id}/`);
   }
 
   createShip(ship: Ship): Observable<Ship> {
@@ -34,10 +34,10 @@ export class ShipService {
   }
 
   updateShip(id: number, ship: Ship): Observable<Ship> {
-    return this.http.put<Ship>(`${this.apiUrl}/{$id}/`, ship);
+    return this.http.put<Ship>(`${this.apiUrl}/${id}/`, ship);
   }
 
   deleteShip(id: number): Observable<Ship> {
-    return this.http.delete<Ship>(`${this.apiUrl}/{$id}/`);
+    return this.http.delete<Ship>(`${this.apiUrl}/${id}/`);
   }
 }
