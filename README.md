@@ -2,8 +2,6 @@
 
 **Logistics planning demo for river fleet management (Django + Angular)**
 
-Demo-Projekt für mein Vorstellungsgespräch als Fachinformatiker Anwendungsentwicklung.
-
 ---
 
 ## 🎯 Projektziel
