@@ -1,6 +1,5 @@
-import { inject } from '@angular/core';
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { Injectable, inject } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
@@ -16,9 +15,8 @@ export interface Ship {
 @Injectable({
   providedIn: 'root'
 })
-
 export class ShipService {
-  private apiUrl = `${environment}.apiUrl/ships`;
+  private apiUrl = `${environment.apiUrl}ships/`;
   private http = inject(HttpClient);
 
   getShips(): Observable<Ship[]> {
@@ -26,18 +24,6 @@ export class ShipService {
   }
 
   getShip(id: number): Observable<Ship> {
-    return this.http.get<Ship>(`${this.apiUrl}/${id}/`);
-  }
-
-  createShip(ship: Ship): Observable<Ship> {
-    return this.http.post<Ship>(this.apiUrl, ship);
-  }
-
-  updateShip(id: number, ship: Ship): Observable<Ship> {
-    return this.http.put<Ship>(`${this.apiUrl}/${id}/`, ship);
-  }
-
-  deleteShip(id: number): Observable<Ship> {
-    return this.http.delete<Ship>(`${this.apiUrl}/${id}/`);
+    return this.http.get<Ship>(`${this.apiUrl}${id}/`);
   }
 }
