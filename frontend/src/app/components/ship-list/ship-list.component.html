@@ -1,0 +1,24 @@
+<div class="ship-list">
+  <h2>Schiffsliste</h2>
+
+  <table *ngIf="ships.length > 0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Kapazität</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let ship of ships">
+        <td>{{ ship.id }}</td>
+        <td>{{ ship.name }}</td>
+        <td>{{ ship.capacity }}</td>
+        <td>{{ ship.status }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="ships.length === 0">Keine Schiffe vorhanden!</p>
+</div>
