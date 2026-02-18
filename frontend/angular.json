@@ -61,6 +61,9 @@
             },
             "development": {
               "buildTarget": "frontend:build:development"
+            },
+            "options": {
+              "host": "127.0.0.1"
             }
           },
           "defaultConfiguration": "development"

@@ -32,13 +32,13 @@ Zeigen, dass ich:
 
 ## 🛠️ Tech-Stack
 
-| Komponente | Technologie |
-|------------|-------------|
+| Komponente | Technologie                        |
+|------------|------------------------------------|
 | Backend | Django 5.1 + Django REST Framework |
-| Frontend | Angular 19+ |
-| Datenbank | SQLite (lokal), PostgreSQL (Prod) |
-| Testing | Django Unit Tests |
-| Deployment | Docker → Proxmox HomeLab |
+| Frontend | Angular 21                         |
+| Datenbank | SQLite (lokal), PostgreSQL (Prod)  |
+| Testing | Django Unit Tests                  |
+| Deployment | Docker → Proxmox HomeLab           |
 
 ---
 
@@ -63,7 +63,7 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-### Frontend (kommt in Tag 3)
+### Frontend
 ```bash
 # Angular-CLI installieren (global)
 npm install -g @angular/cli
@@ -90,13 +90,13 @@ python manage.py test logistics
 
 ## 📅 Projekt-Status
 
-| Tag | Feature | Status | PR |
-|-----|---------|--------|-----|
+| Tag | Feature | Status | PR                                                         |
+|-----|---------|--------|------------------------------------------------------------|
 | **Tag 1** | Django-Setup, Models, Tests | ✅ Fertig | [#1](https://github.com/PhV-80/river-fleet-planner/pull/1) |
-| **Tag 2** | REST API (CRUD-Endpunkte) | 🚧 In Arbeit | - |
-| **Tag 3** | Angular-Setup + erste Komponenten | 📅 Geplant | - |
-| **Tag 4** | Angular-UI (vollständig) | 📅 Geplant | - |
-| **Tag 5** | Deployment (Docker + HomeLab) | 📅 Geplant | - |
+| **Tag 2** | REST API (CRUD-Endpunkte) | ✅ Fertig | [#2](https://github.com/PhV-80/river-fleet-planner/pull/2)                                                     |
+| **Tag 3** | Angular-Setup + erste Komponenten | ➡️ Entfallen | -                                                          |
+| **Tag 4** | Angular-UI (vollständig) | 🚧 In Arbeit | -                                                          |
+| **Tag 5** | Deployment (Docker + HomeLab) | 📅 Geplant | -                                                          |
 
 ---
 
