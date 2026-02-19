@@ -10,13 +10,13 @@ import { ShipService, Ship } from "../../services/ship.service";
   styleUrl: './ship-list.component.css'
 })
 export class ShipListComponent {
-  ships: Ship[] = [];
+  ships: ShipService[] = [];
   private shipService = inject(ShipService);
 
   ngOnInit() {
     this.shipService.getShips().subscribe({
       next: data => this.ships = data,
-      error: err => console.log('Fehler beim Laden der Schiffe:', err),
+      error: err => console.log('Fehler beim Laden der Schiffe: ', err),
     });
   }
 }

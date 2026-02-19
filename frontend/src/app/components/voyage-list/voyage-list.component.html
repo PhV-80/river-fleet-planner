@@ -1,0 +1,28 @@
+<div class="voyage-list">
+  <h2>Fahtenliste</h2>
+
+  <table *ngIf="voyages.length > 0">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Schiff</th>
+      <th>Starthafen</th>
+      <th>Zielhafen</th>
+      <th>Startdatum</th>
+      <th>Enddatum</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let voyage of voyages">
+        <td>{{ voyage.id }}</td>
+        <td>{{ voyage.ship }}</td>
+        <td>{{ voyage.start_port }}</td>
+        <td>{{ voyage.destination_port }}</td>
+        <td>{{ voyage.start_date }}</td>
+        <td>{{ voyage.end_date }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="voyages.length === 0">Keine Fahrten vorhanden!</p>
+</div>

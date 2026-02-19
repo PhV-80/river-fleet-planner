@@ -19,11 +19,11 @@ export class ShipService {
   private apiUrl = `${environment.apiUrl}ships/`;
   private http = inject(HttpClient);
 
-  getShips(): Observable<Ship[]> {
-    return this.http.get<Ship[]>(this.apiUrl);
+  getShips(): Observable<ShipService[]> {
+    return this.http.get<ShipService[]>(this.apiUrl);
   }
 
-  getShip(id: number): Observable<Ship> {
-    return this.http.get<Ship>(`${this.apiUrl}${id}/`);
+  getShip(id: number): Observable<ShipService> {
+    return this.http.get<ShipService>(`${this.apiUrl}${id}/`);
   }
 }
