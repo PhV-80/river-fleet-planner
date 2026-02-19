@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 export interface Ship {
-  id?: number;
+  id: number;
   name: string;
   capacity: number;
   status: 'available' | 'in_voyage' | 'maintenance';
@@ -19,11 +19,11 @@ export class ShipService {
   private apiUrl = `${environment.apiUrl}ships/`;
   private http = inject(HttpClient);
 
-  getShips(): Observable<ShipService[]> {
-    return this.http.get<ShipService[]>(this.apiUrl);
+  getShips(): Observable<Ship[]> {
+    return this.http.get<Ship[]>(this.apiUrl);
   }
 
-  getShip(id: number): Observable<ShipService> {
-    return this.http.get<ShipService>(`${this.apiUrl}${id}/`);
+  getShip(id: number): Observable<Ship> {
+    return this.http.get<Ship>(`${this.apiUrl}${id}/`);
   }
 }

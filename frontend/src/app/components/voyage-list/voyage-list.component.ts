@@ -10,7 +10,7 @@ import { VoyageService, Voyage } from "../../services/voyage.service";
   styleUrl: './voyage-list.component.css'
 })
 export class VoyageListComponent {
-  voyages: VoyageService[] = [];
+  voyages: Voyage[] = [];
   private voyageService = inject(VoyageService);
 
   ngOnInit() {

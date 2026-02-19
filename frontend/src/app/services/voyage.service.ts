@@ -4,9 +4,9 @@ import { Observable } from 'rxjs';
 import { environment } from "../../environments/environment";
 
 export interface Voyage {
-  id?: number;
+  id: number;
   ship: number;
-  ship_details?: string;
+  ship_details: string;
   start_port: string;
   destination_port: string;
   start_date: string;
@@ -22,11 +22,11 @@ export class VoyageService {
   private apiUrl = `${environment.apiUrl}voyages/`;
   private http = inject(HttpClient);
 
-  getVoyages(): Observable<VoyageService[]> {
-    return this.http.get<VoyageService[]>(this.apiUrl)
+  getVoyages(): Observable<Voyage[]> {
+    return this.http.get<Voyage[]>(this.apiUrl)
   }
 
-  getVoyage(id: number): Observable<VoyageService> {
-    return this.http.get<VoyageService>(`${this.apiUrl}${id}/`);
+  getVoyage(id: number): Observable<Voyage> {
+    return this.http.get<Voyage>(`${this.apiUrl}${id}/`);
   }
 }

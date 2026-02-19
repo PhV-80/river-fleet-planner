@@ -10,7 +10,7 @@ import { ShipService, Ship } from "../../services/ship.service";
   styleUrl: './ship-list.component.css'
 })
 export class ShipListComponent {
-  ships: ShipService[] = [];
+  ships: Ship[] = [];
   private shipService = inject(ShipService);
 
   ngOnInit() {
